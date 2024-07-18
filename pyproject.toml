@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "distcopy"
+dynamic = ["dependencies"]
+version = "0.0.1"
+requires-python = ">=3.10"
+authors = [
+  {name = "Martin Dočekal"},
+]
+description = "Script for distributed copying of folders and files."
+readme = "README.md"
+keywords = ["distributed", "copy"]
+
+[project.urls]
+Repository = "https://github.com/mdocekal/distcopy"
+
+[project.scripts]
+decontaminator = "distcopy.__main__:main"
+
+[tool.hatch.build]
+exclude = [
+  "/tests",
+]
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
