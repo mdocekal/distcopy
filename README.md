@@ -91,3 +91,6 @@ When split file is gathered the order of the line parts is given by the order of
 The trailing backslashes act the same as in rsync. 
 
 If the source path ends with a backslash, the content of the folder is copied. If the source path does not end with a backslash, the folder itself is copied.
+
+# Connection note
+The script uses `rsync` to copy the files. It is expected that the nodes are accessible via ssh without password.
